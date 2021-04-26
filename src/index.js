@@ -8,12 +8,12 @@ import BookStoreService from "./services/bookstore-service";
 import {BookStoreServiceProvider} from "./components/book-store-service-context";
 import store from "./store";
 
-const bookstoreService = new BookStoreService();
+const bookStoreService = new BookStoreService();
 
 ReactDOM.render(
   <Provider store={store}>
       <ErrorBoundary>
-          <BookStoreServiceProvider value={bookstoreService}>
+          <BookStoreServiceProvider value={bookStoreService}>
             <Router>
                 <App/>
             </Router>
