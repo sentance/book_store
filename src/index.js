@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
+import {BrowserRouter as Router} from "react-router-dom";
+import App from './components/app/';
+import ErrorBoundary from "./components/error-boundary";
+import BookStoreService from "./services/bookstore-service";
+import {BookStoreServiceProvider} from "./components/book-store-service-context";
+import store from "./store";
 
-
+const bookstoreService = new BookStoreService();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <h1>Hello sss2 and welcomesss ddd to alaska  sssr   </h1>
-  </React.StrictMode>,
+  <Provider store={store}>
+      <ErrorBoundary>
+          <BookStoreServiceProvider value={bookstoreService}>
+            <Router>
+                <App/>
+            </Router>
+          </BookStoreServiceProvider>
+      </ErrorBoundary>
+  </Provider>,
   document.getElementById('root')
 );
 
