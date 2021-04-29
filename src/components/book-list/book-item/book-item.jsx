@@ -1,12 +1,20 @@
-import React, {Fragment} from "react";
+import React from "react";
+import  "./book-list-item.css"
 
 const BookItem = ({book}) => {
-    const {title, author} = book;
+    const {author, title, price, coverImage} = book;
     return (
-        <Fragment>
-            <span>Author: {author} </span>
-            <span>Title: {title} </span>
-        </Fragment>
+        <div className="book-list-item">
+            <div className="book-cover">
+                <img src={coverImage} alt="coverImage"/>
+            </div>
+            <div className="book-details">
+                <a href={"/"} className="book-title">{title} </a>
+                <div className="book-author">{author} </div>
+                <div className="book-price">${price} </div>
+                <button className="btn btn-info">add to cart</button>
+            </div>
+        </div>
     )
 }
 

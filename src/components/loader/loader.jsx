@@ -1,6 +1,6 @@
 import React from "react";
 import Pulse from './Pulse.svg'
-const Spinner = () => {
+const Loader = () => {
     return(
         <div style={{margin: '0 auto'}}>
            <img src={Pulse} alt="spinner"/>
@@ -8,4 +8,4 @@ const Spinner = () => {
     )
 }
 
-export default Spinner;
+export default Loader;

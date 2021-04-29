@@ -1,7 +1,10 @@
 import React from "react";
+import ShoppingCartTable from "../../shopping-cart-table";
 
 const CheckOut = () => {
-    return <h2>CheckOut Page</h2>
+    return (
+        <ShoppingCartTable/>
+    )
 }
 
 export default CheckOut;

@@ -1,16 +1,20 @@
 import React from "react";
-import { Route, Switch} from "react-router-dom";
+import { Route, Switch, Redirect} from "react-router-dom";
 import Navigation from "../navigation/navigation";
 import CheckOut from "../pages/checkout/checkout";
 import Main from "../pages/main";
+import Header from "../header";
 
 const App = () =>{
     return (
-        <div>
-            <h2>Hello cat and tinny - it's my wife and helpers can get</h2>
+        <div className="container">
+            <Header numItems={3} total={2400}/>
             <Navigation/>
             <Switch>
-                <Route path="/main" exact>
+                <Route exact path="/">
+                    <Redirect to="/main" />
+                </Route>
+                <Route path="/main" exact >
                     <Main/>
                 </Route>
                 <Route path="/checkout">
