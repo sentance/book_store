@@ -1,5 +1,5 @@
 import React from "react";
-import BookList from "../../book-list/book-list";
+import BookList from "../../book-list/book-list-container";
 import ShoppingCartTable from "../../shopping-cart-table";
 
 const Main = () => {
