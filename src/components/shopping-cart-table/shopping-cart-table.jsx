@@ -51,11 +51,11 @@ const ShoppingCartTable = (props) => {
 }
 const mapStateToProps = (state) => {
     return {
-        cartItem: state.cartItem
+        cartItem: state.shoppingCart.cartItem
     }
 }
 const mapDispatchToProps = {
-      onDelete: allBookRemoveFromCart,
+    onDelete: allBookRemoveFromCart,
     onDecrease: removeBook,
     onIncrease: bookAddedToCart,
 }
